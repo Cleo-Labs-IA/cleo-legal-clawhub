@@ -1,0 +1,51 @@
+name: publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish-clawhub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify tag matches package.json
+        run: |
+          TAG=${GITHUB_REF#refs/tags/v}
+          PJ=$(node -e "console.log(require('./package.json').version)")
+          if [ "$TAG" != "$PJ" ]; then
+            echo "Tag $TAG does not match package.json version $PJ"
+            exit 1
+          fi
+
+      - name: Install clawhub CLI
+        run: npm install -g clawhub
+
+      - name: Publish to ClawHub
+        env:
+          CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+        run: |
+          mkdir -p ~/.clawhub
+          echo "$CLAWHUB_TOKEN" > ~/.clawhub/credentials
+          clawhub package publish .
+
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
