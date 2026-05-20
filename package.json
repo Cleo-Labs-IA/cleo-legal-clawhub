@@ -1,7 +1,7 @@
 {
-  "name": "@alexbloch-ia/openclaw-plugin",
+  "name": "@alexbloch-ia/legal-data",
   "version": "1.0.0",
-  "description": "Real regulatory data for OpenClaw agents — GDPR, customs/HS codes, sanctions, dual-use, EAEU. 66 official sources across 100+ countries.",
+  "description": "Legal data plugin for OpenClaw — 66 official sources across 100+ countries.",
   "license": "MIT-0",
   "type": "module",
   "homepage": "https://cleolabs.co/legal",

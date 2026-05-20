@@ -9,7 +9,7 @@
 
 2. Install the plugin:
    ```bash
-   openclaw plugins install clawhub:cleo-legal
+   openclaw plugins install clawhub:legal-data
    ```
 
 3. Run setup:
@@ -47,13 +47,13 @@ openclaw plugins update --all
 Or specifically:
 
 ```bash
-openclaw plugins update clawhub:cleo-legal
+openclaw plugins update clawhub:legal-data
 ```
 
 ## Uninstall
 
 ```bash
-openclaw plugins uninstall cleo-legal
+openclaw plugins uninstall legal-data
 rm -rf ~/.cleo-legal
 unset CLEO_LEGAL_API_KEY
 ```

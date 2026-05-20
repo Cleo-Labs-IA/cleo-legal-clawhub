@@ -19,7 +19,7 @@ Stop your agent from hallucinating legal citations. GDPR, customs/HS codes, sanc
 ````markdown
 ## What it does
 
-cleo-legal is an MCP plugin that gives your OpenClaw agent access to real regulatory data instead of LLM guesses. Wraps the Cleo Legal API's MCP server (19 tools) into a one-install package.
+legal-data is an MCP plugin that gives your OpenClaw agent access to real regulatory data instead of LLM guesses. Wraps the Cleo Legal API's MCP server (19 tools) into a one-install package.
 
 ### 6 slash commands
 
@@ -49,7 +49,7 @@ Get a key at https://cleolabs.co/signup.
 ## Install
 
 ```bash
-openclaw plugins install clawhub:cleo-legal
+openclaw plugins install clawhub:legal-data
 openclaw run /cleo-setup
 ```
 

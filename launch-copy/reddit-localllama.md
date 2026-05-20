@@ -16,7 +16,7 @@ Hi OpenClaw folks,
 I just published cleo-legal on ClawHub. It's a plugin that gives your OpenClaw agent grounded regulatory data instead of LLM guesses — GDPR, HS codes, sanctions, dual-use, EAEU, GOST, the lot.
 
 Install:
-  openclaw plugins install clawhub:cleo-legal
+  openclaw plugins install clawhub:legal-data
   openclaw run /cleo-setup
 
 What it does:

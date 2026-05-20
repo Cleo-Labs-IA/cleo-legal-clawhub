@@ -1,9 +1,9 @@
-# cleo-legal — OpenClaw plugin
+# Legal Data Plugin for OpenClaw
 
 > **Stop your OpenClaw agent from hallucinating legal citations.** Real regulations from 66 official sources across 100+ countries — GDPR, customs/HS codes, sanctions, dual-use, GOST, EAEU.
 
 [![License: MIT-0](https://img.shields.io/badge/License-MIT--0-yellow.svg)](https://opensource.org/licenses/MIT-0)
-[![ClawHub](https://img.shields.io/badge/ClawHub-cleo--legal-blue)](https://clawhub.ai/plugins/cleo-legal)
+[![ClawHub](https://img.shields.io/badge/ClawHub-legal--data-blue)](https://clawhub.ai/plugins/legal-data)
 [![MCP](https://img.shields.io/badge/MCP-19%20tools-green)](https://modelcontextprotocol.io)
 [![Coverage](https://img.shields.io/badge/coverage-66%20sources%20·%20100%2B%20countries-green)](https://cleolabs.co/legal)
 
@@ -21,7 +21,7 @@ Plus **5 SEO-targeted skills** that auto-invoke when your agent detects regulato
 ## Install
 
 ```bash
-openclaw plugins install clawhub:cleo-legal
+openclaw plugins install clawhub:legal-data
 ```
 
 Then run setup:
@@ -103,6 +103,6 @@ MIT-0 (ClawHub requirement). Plugin source is fully open; API access requires an
 CI requires two GitHub secrets (Settings → Secrets → Actions):
 
 - `CLAWHUB_TOKEN`: ClawHub publisher token (obtain via `clawhub login` locally, copy from `~/.clawhub/credentials`)
-- `NPM_TOKEN`: npm automation token with publish rights to `@cleo-legal/*`
+- `NPM_TOKEN`: npm automation token with publish rights to `@alexbloch-ia/*`
 
 Release: `git tag v1.0.x && git push origin v1.0.x`. CI publishes to ClawHub + npm.
