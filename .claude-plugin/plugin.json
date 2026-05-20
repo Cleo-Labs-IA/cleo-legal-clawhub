@@ -1,0 +1,41 @@
+{
+  "name": "cleo-legal",
+  "description": "Real regulatory data for OpenClaw agents — GDPR, customs/HS codes, sanctions, dual-use, EAEU, GOST. 66 official sources across 100+ countries. Stops your LLM from hallucinating legal citations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cleo Labs",
+    "email": "hello@cleolabs.co",
+    "url": "https://cleolabs.co"
+  },
+  "homepage": "https://cleolabs.co/legal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cleo-Labs-IA/cleo-legal-clawhub"
+  },
+  "license": "MIT-0",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "clawhub",
+    "mcp",
+    "legal",
+    "regulatory",
+    "compliance",
+    "gdpr",
+    "ccpa",
+    "lgpd",
+    "pipl",
+    "customs",
+    "hs-code",
+    "tn-ved",
+    "sanctions",
+    "ofac",
+    "dual-use",
+    "wassenaar",
+    "kyc",
+    "aml",
+    "eaeu",
+    "gost",
+    "anti-hallucination"
+  ]
+}
