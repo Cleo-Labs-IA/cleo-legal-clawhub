@@ -17,7 +17,7 @@
    openclaw run /cleo-setup
    ```
 
-   Opens cleolabs.co/signup in your browser. Sign up, copy the `ld_live_...` API key, paste back.
+   Opens legaldata-public.cleolabs.co/signup in your browser. Sign up, copy the `ld_live_...` API key, paste back.
 
 4. Export the env var (your shell):
    ```bash

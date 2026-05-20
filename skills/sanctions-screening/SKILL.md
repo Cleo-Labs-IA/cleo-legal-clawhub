@@ -10,7 +10,7 @@ metadata:
     envVars:
       - { name: CLEO_LEGAL_API_KEY, required: true, description: "Cleo Legal API key." }
     emoji: "🛑"
-    homepage: https://cleolabs.co/legal
+    homepage: https://legaldata-public.cleolabs.co
 ---
 
 # Sanctions Screening

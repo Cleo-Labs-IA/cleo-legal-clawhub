@@ -4,7 +4,7 @@
   "description": "Legal data plugin for OpenClaw — 66 official sources across 100+ countries.",
   "license": "MIT-0",
   "type": "module",
-  "homepage": "https://cleolabs.co/legal",
+  "homepage": "https://legaldata-public.cleolabs.co",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cleo-Labs-IA/cleo-legal-clawhub"

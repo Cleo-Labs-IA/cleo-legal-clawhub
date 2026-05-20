@@ -5,7 +5,7 @@
 [![License: MIT-0](https://img.shields.io/badge/License-MIT--0-yellow.svg)](https://opensource.org/licenses/MIT-0)
 [![ClawHub](https://img.shields.io/badge/ClawHub-legal--data-blue)](https://clawhub.ai/plugins/legal-data)
 [![MCP](https://img.shields.io/badge/MCP-19%20tools-green)](https://modelcontextprotocol.io)
-[![Coverage](https://img.shields.io/badge/coverage-66%20sources%20·%20100%2B%20countries-green)](https://cleolabs.co/legal)
+[![Coverage](https://img.shields.io/badge/coverage-66%20sources%20·%20100%2B%20countries-green)](https://legaldata-public.cleolabs.co)
 
 ## What it does
 
@@ -30,7 +30,7 @@ Then run setup:
 openclaw run /cleo-setup
 ```
 
-This opens [cleolabs.co/signup](https://cleolabs.co/signup) in your browser. Create an account, copy the `ld_live_...` API key, paste it back.
+This opens [cleolabs.co/signup](https://legaldata-public.cleolabs.co/signup) in your browser. Create an account, copy the `ld_live_...` API key, paste it back.
 
 Set the env var:
 
@@ -53,7 +53,7 @@ You should get real Article 17 text from EUR-Lex.
 | Tier | Quota | Price |
 |---|---|---|
 | **Free** | 3 lookups (lifetime) | $0 |
-| **Pro** | 300/min · 1M/mo | (see cleolabs.co/pricing) |
+| **Pro** | 300/min · 1M/mo | (see legaldata-public.cleolabs.co/pricing) |
 | **Enterprise** | 1500/min · 10M/mo | Contact sales |
 
 Composite endpoints (`/cleo-compliance`) consume 5 units per call.
@@ -72,7 +72,7 @@ Composite endpoints (`/cleo-compliance`) consume 5 units per call.
 - **Russia / EAEU**: EEC TR CU, GOST R
 - **WIPO Lex** as universal fallback for 100+ countries
 
-Full list: [coverage report](https://cleolabs.co/legal/coverage).
+Full list: [coverage report](https://legaldata-public.cleolabs.co/docs).
 
 ## Examples
 

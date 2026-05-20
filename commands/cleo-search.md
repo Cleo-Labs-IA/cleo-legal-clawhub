@@ -32,5 +32,5 @@ Search the Cleo Legal database. Argument: `$ARGUMENTS` is a natural-language que
 ## Error handling
 
 - Empty results: "No matches. Try a broader query, or add `country:XX`."
-- 402 quota_exhausted: "You've used your 3 free lookups. Upgrade at https://cleolabs.co/upgrade?utm_source=clawhub&utm_medium=cli-quota-hit."
+- 402 quota_exhausted: "You've used your 3 free lookups. Upgrade at https://legaldata-public.legaldata-public.cleolabs.co/pricing?utm_source=clawhub&utm_medium=cli-quota-hit."
 - 401: "API key is invalid. Run `/cleo-setup` to reconfigure."

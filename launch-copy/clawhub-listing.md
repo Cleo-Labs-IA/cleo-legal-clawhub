@@ -44,7 +44,7 @@ legal-data is an MCP plugin that gives your OpenClaw agent access to real regula
 - **Pro**: 300/min · 1M/mo
 - **Enterprise**: 1500/min · 10M/mo
 
-Get a key at https://cleolabs.co/signup.
+Get a key at https://legaldata-public.cleolabs.co/signup.
 
 ## Install
 

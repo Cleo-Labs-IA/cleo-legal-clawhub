@@ -37,7 +37,7 @@ The plugin's 5 skills auto-invoke based on the user's question. If your question
 
 ## "402 quota_exhausted"
 
-You've used your 3 free lookups. Upgrade at https://cleolabs.co/upgrade?utm_source=clawhub.
+You've used your 3 free lookups. Upgrade at https://legaldata-public.legaldata-public.cleolabs.co/pricing?utm_source=clawhub.
 
 ## Other issues
 

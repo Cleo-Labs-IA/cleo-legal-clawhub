@@ -8,9 +8,9 @@ metadata:
       env: [CLEO_LEGAL_API_KEY]
     primaryEnv: CLEO_LEGAL_API_KEY
     envVars:
-      - { name: CLEO_LEGAL_API_KEY, required: true, description: "Cleo Legal API key (ld_live_...). Get one at https://cleolabs.co/signup" }
+      - { name: CLEO_LEGAL_API_KEY, required: true, description: "Cleo Legal API key (ld_live_...). Get one at https://legaldata-public.cleolabs.co/signup" }
     emoji: "⚖️"
-    homepage: https://cleolabs.co/legal
+    homepage: https://legaldata-public.cleolabs.co
 ---
 
 # Regulatory Research

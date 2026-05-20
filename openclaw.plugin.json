@@ -3,7 +3,7 @@
   "name": "Legal Data Plugin for OpenClaw",
   "description": "Legal data plugin for OpenClaw — real regulations from 66 official sources across 100+ countries. GDPR, customs/HS codes, sanctions, dual-use, EAEU, GOST. Stops your agent from hallucinating legal citations.",
   "version": "1.0.0",
-  "homepage": "https://cleolabs.co/legal",
+  "homepage": "https://legaldata-public.cleolabs.co",
   "license": "MIT-0",
   "skills": [
     "skills/regulatory-research",
@@ -20,7 +20,7 @@
       "CLEO_LEGAL_API_KEY": {
         "type": "string",
         "pattern": "^ld_live_[a-zA-Z0-9]{16,}$",
-        "description": "Cleo Legal API key (format: ld_live_...). Get one at https://cleolabs.co/signup"
+        "description": "Cleo Legal API key (format: ld_live_...). Get one at https://legaldata-public.cleolabs.co/signup"
       },
       "CLEO_LEGAL_MCP_URL": {
         "type": "string",
@@ -34,8 +34,8 @@
     "providers": [
       {
         "name": "cleo-legal-signup",
-        "description": "Open cleolabs.co/signup in browser to obtain an API key",
-        "url": "https://cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup",
+        "description": "Open legaldata-public.cleolabs.co/signup in browser to obtain an API key",
+        "url": "https://legaldata-public.cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup",
         "envVar": "CLEO_LEGAL_API_KEY"
       }
     ]

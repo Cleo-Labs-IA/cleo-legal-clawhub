@@ -24,13 +24,13 @@ Use the user's OS to open the signup URL with the `clawhub` UTM source:
 
 ```bash
 # macOS
-open "https://cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup"
+open "https://legaldata-public.cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup"
 
 # Linux
-xdg-open "https://cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup"
+xdg-open "https://legaldata-public.cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup"
 
 # Windows
-start "" "https://cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup"
+start "" "https://legaldata-public.cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup"
 ```
 
 Detect platform via `process.platform`. If browser cannot open, print the URL and ask the user to open manually.
@@ -52,7 +52,7 @@ curl -sS -o /dev/null -w "%{http_code}" \
   https://api.legaldata.cleolabs.co/health
 ```
 
-Expect `200`. On `401`: "Key was rejected — verify on cleolabs.co/settings/api-keys."
+Expect `200`. On `401`: "Key was rejected — verify on legaldata-public.cleolabs.co/dashboard."
 
 ### 5. Save the key
 
@@ -82,7 +82,7 @@ Suggest they restart OpenClaw or run `openclaw mcp restart cleo-legal`.
 
 Immediately call MCP tool `search_legal` with `{ q: "GDPR Article 17", lang: "en", limit: 3 }`. Render the top result with title + country + first 500 chars of excerpt + UUID. End with:
 
-> Try `/cleo-search "<your query>"` next, or `/cleo-classify "<product description>"` for HS-code classification. You have **3 free lookups** on this account — upgrade at https://cleolabs.co/upgrade?utm_source=clawhub.
+> Try `/cleo-search "<your query>"` next, or `/cleo-classify "<product description>"` for HS-code classification. You have **3 free lookups** on this account — upgrade at https://legaldata-public.legaldata-public.cleolabs.co/pricing?utm_source=clawhub.
 
 ### Security notes
 
