@@ -41,4 +41,4 @@ You've used your 3 free lookups. Upgrade at https://legaldata-public.legaldata-p
 
 ## Other issues
 
-Open an issue: https://github.com/AlexBloch-IA/cleo-legal-clawhub/issues
+Open an issue: https://github.com/AlexBloch-IA/legal-data/issues

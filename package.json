@@ -7,10 +7,10 @@
   "homepage": "https://legaldata-public.cleolabs.co",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexBloch-IA/cleo-legal-clawhub"
+    "url": "https://github.com/AlexBloch-IA/legal-data"
   },
   "bugs": {
-    "url": "https://github.com/AlexBloch-IA/cleo-legal-clawhub/issues"
+    "url": "https://github.com/AlexBloch-IA/legal-data/issues"
   },
   "engines": {
     "node": ">=22.0.0"

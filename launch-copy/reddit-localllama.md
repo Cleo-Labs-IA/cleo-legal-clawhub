@@ -35,7 +35,7 @@ What I want from you:
 - Feature requests
 
 License: MIT-0 (plugin), freemium (API).
-Source: https://github.com/AlexBloch-IA/cleo-legal-clawhub
+Source: https://github.com/AlexBloch-IA/legal-data
 ClawHub: https://clawhub.ai/plugins/cleo-legal
 
 Happy to answer architecture questions.

@@ -55,7 +55,7 @@ openclaw run /cleo-setup
 
 ## Source
 
-[github.com/AlexBloch-IA/cleo-legal-clawhub](https://github.com/AlexBloch-IA/cleo-legal-clawhub) — MIT-0.
+[github.com/AlexBloch-IA/legal-data](https://github.com/AlexBloch-IA/legal-data) — MIT-0.
 ````
 
 **Tags** (vector-search ranking — be exhaustive):
