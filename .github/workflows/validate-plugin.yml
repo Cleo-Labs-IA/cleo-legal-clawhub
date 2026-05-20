@@ -1,0 +1,93 @@
+name: validate-plugin
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Lint plugin JSON manifests
+        run: |
+          for f in \
+            .claude-plugin/plugin.json \
+            .mcp.json \
+            package.json
+          do
+            echo "Validating $f"
+            node -e "JSON.parse(require('fs').readFileSync('$f', 'utf-8'))" || exit 1
+          done
+
+      - name: Verify .mcp.json uses mcp.servers (OpenClaw format)
+        run: |
+          node -e "
+            const cfg = JSON.parse(require('fs').readFileSync('.mcp.json', 'utf-8'));
+            if (!cfg.mcp || !cfg.mcp.servers || !cfg.mcp.servers['cleo-legal']) {
+              console.error('.mcp.json must have mcp.servers.cleo-legal block');
+              process.exit(1);
+            }
+            const srv = cfg.mcp.servers['cleo-legal'];
+            if (srv.transport !== 'streamable-http' && srv.transport !== 'sse') {
+              console.error('transport must be streamable-http or sse');
+              process.exit(1);
+            }
+          "
+
+      - name: Verify LICENSE is MIT-0 (ClawHub requirement)
+        run: |
+          grep -q "MIT No Attribution" LICENSE || (echo "LICENSE must be MIT-0" && exit 1)
+
+      - name: Verify all required files exist
+        run: |
+          for f in \
+            README.md \
+            CHANGELOG.md \
+            LICENSE \
+            commands/cleo-setup.md \
+            commands/cleo-search.md \
+            commands/cleo-classify.md \
+            commands/cleo-compliance.md \
+            commands/cleo-doc.md \
+            commands/cleo-changes.md \
+            skills/regulatory-research/SKILL.md \
+            skills/gdpr-data-protection/SKILL.md \
+            skills/customs-hs-classifier/SKILL.md \
+            skills/dual-use-export-control/SKILL.md \
+            skills/sanctions-screening/SKILL.md
+          do
+            if [ ! -f "$f" ]; then echo "MISSING: $f" && exit 1; fi
+          done
+          echo "All required files present."
+
+      - name: Verify manifest versions match
+        run: |
+          PJ_VER=$(node -e "console.log(require('./.claude-plugin/plugin.json').version)")
+          NPM_VER=$(node -e "console.log(require('./package.json').version)")
+          if [ "$PJ_VER" != "$NPM_VER" ]; then
+            echo "Version mismatch: plugin.json=$PJ_VER, package.json=$NPM_VER"
+            exit 1
+          fi
+          if ! grep -q "## $PJ_VER" CHANGELOG.md; then
+            echo "CHANGELOG.md missing entry for version $PJ_VER"
+            exit 1
+          fi
+
+      - name: Check bundle size (ClawHub limit 50 MB)
+        run: |
+          SIZE=$(du -sb . --exclude='.git' --exclude='.github' | cut -f1)
+          MAX=$((50 * 1024 * 1024))
+          if [ "$SIZE" -gt "$MAX" ]; then
+            echo "Bundle size $SIZE > 50 MB (ClawHub limit)"
+            exit 1
+          fi
+          echo "Bundle size: $SIZE bytes (limit $MAX)"
