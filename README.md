@@ -96,7 +96,7 @@ MIT-0 (ClawHub requirement). Plugin source is fully open; API access requires an
 
 ## Issues & feedback
 
-[github.com/Cleo-Labs-IA/cleo-legal-clawhub/issues](https://github.com/Cleo-Labs-IA/cleo-legal-clawhub/issues)
+[github.com/AlexBloch-IA/cleo-legal-clawhub/issues](https://github.com/AlexBloch-IA/cleo-legal-clawhub/issues)
 
 ## Maintainer setup
 
