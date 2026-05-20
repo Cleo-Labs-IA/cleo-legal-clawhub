@@ -16,6 +16,8 @@
     "node": ">=22.0.0"
   },
   "files": [
+    "dist/**",
+    "openclaw.plugin.json",
     ".claude-plugin",
     "commands",
     "skills",
@@ -23,7 +25,9 @@
     "README.md",
     "LICENSE"
   ],
+  "main": "./dist/index.js",
   "openclaw": {
+    "extensions": ["./dist/index.js"],
     "compat": { "pluginApi": "1.x" },
     "build":  { "openclawVersion": "1.x" }
   },
