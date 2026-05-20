@@ -1,0 +1,15 @@
+{
+  "mcp": {
+    "servers": {
+      "cleo-legal": {
+        "url": "${CLEO_LEGAL_MCP_URL:-https://api.legaldata.cleolabs.co/mcp}",
+        "transport": "streamable-http",
+        "headers": {
+          "Authorization": "Bearer ${CLEO_LEGAL_API_KEY}",
+          "X-Client": "openclaw-plugin/1.0.0"
+        },
+        "connectionTimeoutMs": 30000
+      }
+    }
+  }
+}
