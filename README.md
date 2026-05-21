@@ -3,7 +3,7 @@
 > **Stop your OpenClaw agent from hallucinating legal citations.** Real regulations from 66 official sources across 100+ countries — GDPR, customs/HS codes, sanctions, dual-use, GOST, EAEU.
 
 [![License: MIT-0](https://img.shields.io/badge/License-MIT--0-yellow.svg)](https://opensource.org/licenses/MIT-0)
-[![ClawHub](https://img.shields.io/badge/ClawHub-legal--data-blue)](https://clawhub.ai/plugins/legal-data)
+[![ClawHub](https://img.shields.io/badge/ClawHub-@alexbloch--ia%2Flegal--data-blue)](https://clawhub.ai/plugins/@alexbloch-ia/legal-data)
 [![MCP](https://img.shields.io/badge/MCP-19%20tools-green)](https://modelcontextprotocol.io)
 [![Coverage](https://img.shields.io/badge/coverage-66%20sources%20·%20100%2B%20countries-green)](https://legaldata-public.cleolabs.co)
 
@@ -21,7 +21,7 @@ Plus **5 SEO-targeted skills** that auto-invoke when your agent detects regulato
 ## Install
 
 ```bash
-openclaw plugins install clawhub:legal-data
+openclaw plugins install clawhub:@alexbloch-ia/legal-data
 ```
 
 Then run setup:
@@ -84,9 +84,35 @@ Full list: [coverage report](https://legaldata-public.cleolabs.co/docs).
 
 See [docs/troubleshooting.md](docs/troubleshooting.md) — covers the streamable-http header bug workaround (OpenClaw issue #65590, May 2026).
 
+## Compatibility
+
+| Component | Minimum |
+|---|---|
+| OpenClaw runtime | `2026.3.24-beta.2` (verified on `2026.4.x` and `2026.5.x`) |
+| Node (only for `dist/index.js` no-op entry) | `>=22.0.0` |
+| ClawHub CLI | any version that supports `clawhub package publish` |
+
+Declared in `package.json`:
+
+```json
+"openclaw": {
+  "compat": { "pluginApi": ">=2026.3.24-beta.2", "minGatewayVersion": ">=2026.3.24-beta.2" },
+  "build":  { "openclawVersion": ">=2026.3.24-beta.2" }
+}
+```
+
+If `openclaw plugins install` fails with a runtime-version mismatch, upgrade OpenClaw (`openclaw --version` to check) before retrying.
+
 ## Architecture
 
-This plugin wraps the [Cleo Legal API's MCP server](https://api.legaldata.cleolabs.co/mcp) (Streamable HTTP, Bearer auth, 19 tools). The MCP server itself handles 66 sources, multi-language search, embeddings, content-change detection, and the WIPO Lex universal fallback for geo-blocked jurisdictions.
+This plugin is a **declarative bundle** wrapping the [Cleo Legal API's MCP server](https://api.legaldata.cleolabs.co/mcp) (Streamable HTTP, Bearer auth, 19 tools). It is **not** a heavy native runtime plugin — the `dist/index.js` entry is a no-op required only by OpenClaw's validator. All value lives in:
+
+- `.mcp.json` — MCP server config (auto-detected by OpenClaw)
+- `commands/*.md` — 6 user-invocable slash commands
+- `skills/*/SKILL.md` — 5 auto-invoked skills
+- `openclaw.plugin.json` + `.claude-plugin/plugin.json` — manifests
+
+The Cleo Legal API's MCP server handles 66 sources, multi-language search, embeddings, content-change detection, and the WIPO Lex universal fallback for geo-blocked jurisdictions. The plugin merely surfaces it inside OpenClaw with a sensible UX.
 
 For the backend architecture, see [the main repo](https://github.com/Cleo-Labs-IA/cleo-legal-api).
 

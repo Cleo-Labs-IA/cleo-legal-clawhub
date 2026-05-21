@@ -26,4 +26,4 @@ fi
 echo "==> Publishing"
 clawhub package publish .
 
-echo "==> Done. Listing at https://clawhub.ai/plugins/cleo-legal within 30 min (VirusTotal scan)."
+echo "==> Done. Listing at https://clawhub.ai/plugins/@alexbloch-ia/legal-data within 30 min (VirusTotal scan)."

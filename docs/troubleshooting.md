@@ -22,7 +22,7 @@ Replace the `headers` block with:
 ```json
 "headersHelper": {
   "command": "echo",
-  "args": ["{\"Authorization\": \"Bearer ${CLEO_LEGAL_API_KEY}\", \"X-Client\": \"openclaw-plugin/1.0.0\"}"]
+  "args": ["{\"Authorization\": \"Bearer ${CLEO_LEGAL_API_KEY}\", \"X-Client\": \"openclaw-plugin/1.2.1\"}"]
 }
 ```
 
@@ -37,7 +37,7 @@ The plugin's 5 skills auto-invoke based on the user's question. If your question
 
 ## "402 quota_exhausted"
 
-You've used your 3 free lookups. Upgrade at https://legaldata-public.legaldata-public.cleolabs.co/pricing?utm_source=clawhub.
+You've used your 3 free lookups. Upgrade at https://legaldata-public.cleolabs.co/pricing?utm_source=clawhub.
 
 ## Other issues
 

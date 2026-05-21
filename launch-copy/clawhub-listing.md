@@ -49,7 +49,7 @@ Get a key at https://legaldata-public.cleolabs.co/signup.
 ## Install
 
 ```bash
-openclaw plugins install clawhub:legal-data
+openclaw plugins install clawhub:@alexbloch-ia/legal-data
 openclaw run /cleo-setup
 ```
 
@@ -74,7 +74,7 @@ openclaw-plugin, clawhub
 **Listing checklist:**
 
 - [ ] GitHub publisher account is 1+ week old (`gh api user --jq '.created_at'`)
-- [ ] Repository is public and tagged `v1.0.0`
+- [ ] Repository is public and tagged with the current release (e.g. `v1.2.1`)
 - [ ] `package.json` has `openclaw.compat.pluginApi` + `openclaw.build.openclawVersion`
 - [ ] `README.md` has install + signup instructions
 - [ ] LICENSE is MIT-0

@@ -48,7 +48,7 @@ Use the `Bash` tool:
 ```bash
 curl -sS -o /dev/null -w "%{http_code}" \
   -H "Authorization: Bearer <THE_KEY>" \
-  -H "X-Client: openclaw-plugin/1.0.0" \
+  -H "X-Client: openclaw-plugin/1.2.1" \
   https://api.legaldata.cleolabs.co/health
 ```
 
@@ -82,7 +82,7 @@ Suggest they restart OpenClaw or run `openclaw mcp restart cleo-legal`.
 
 Immediately call MCP tool `search_legal` with `{ q: "GDPR Article 17", lang: "en", limit: 3 }`. Render the top result with title + country + first 500 chars of excerpt + UUID. End with:
 
-> Try `/cleo-search "<your query>"` next, or `/cleo-classify "<product description>"` for HS-code classification. You have **3 free lookups** on this account — upgrade at https://legaldata-public.legaldata-public.cleolabs.co/pricing?utm_source=clawhub.
+> Try `/cleo-search "<your query>"` next, or `/cleo-classify "<product description>"` for HS-code classification. You have **3 free lookups** on this account — upgrade at https://legaldata-public.cleolabs.co/pricing?utm_source=clawhub.
 
 ### Security notes
 

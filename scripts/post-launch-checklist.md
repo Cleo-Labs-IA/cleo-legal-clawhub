@@ -12,8 +12,8 @@
 
 ## Launch day (T=0)
 
-- [ ] Run `scripts/publish-clawhub.sh` (manual first time — or `git tag v1.0.0 && git push origin v1.0.0` for CI)
-- [ ] Verify https://clawhub.ai/plugins/cleo-legal is live (~30-60 min)
+- [ ] Run `scripts/publish-clawhub.sh` (manual) — or `git tag v$(node -p "require('./package.json').version") && git push origin --tags` for CI
+- [ ] Verify https://clawhub.ai/plugins/@alexbloch-ia/legal-data is live (~30-60 min)
 - [ ] Verify cover image displays correctly
 - [ ] Post Reddit r/OpenClaw OR r/LocalLLaMA thread (launch-copy/reddit-localllama.md)
 - [ ] Post X with native video (launch-copy/x-openclaw.md)

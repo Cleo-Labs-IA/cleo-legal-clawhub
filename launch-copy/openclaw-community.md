@@ -21,8 +21,8 @@ OpenClaw's community Discord. Brief intro:
 ```
 Hi all — just published cleo-legal on ClawHub. Regulatory data plugin (GDPR, HS codes, sanctions, dual-use) that grounds your OpenClaw agent in real laws from 66 official sources. Free tier 3 lookups.
 
-Install: openclaw plugins install clawhub:legal-data
-Source: https://clawhub.ai/plugins/cleo-legal
+Install: openclaw plugins install clawhub:@alexbloch-ia/legal-data
+Source: https://clawhub.ai/plugins/@alexbloch-ia/legal-data
 
 Happy to do a demo if interested.
 ```

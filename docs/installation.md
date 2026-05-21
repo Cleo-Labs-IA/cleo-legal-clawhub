@@ -9,7 +9,7 @@
 
 2. Install the plugin:
    ```bash
-   openclaw plugins install clawhub:legal-data
+   openclaw plugins install clawhub:@alexbloch-ia/legal-data
    ```
 
 3. Run setup:
@@ -47,7 +47,7 @@ openclaw plugins update --all
 Or specifically:
 
 ```bash
-openclaw plugins update clawhub:legal-data
+openclaw plugins update clawhub:@alexbloch-ia/legal-data
 ```
 
 ## Uninstall

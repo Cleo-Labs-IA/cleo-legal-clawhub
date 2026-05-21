@@ -15,11 +15,11 @@ If you're building automation that has to be compliant, your agent should cite r
 
 66 official sources, 100+ countries. 3 free lookups in-CLI.
 
-  openclaw plugins install clawhub:legal-data
+  openclaw plugins install clawhub:@alexbloch-ia/legal-data
 
 [45s native video demo]
 
-clawhub.ai/plugins/cleo-legal
+clawhub.ai/plugins/@alexbloch-ia/legal-data
 ```
 
 **Video script (45s):**
@@ -28,7 +28,7 @@ clawhub.ai/plugins/cleo-legal
 - 0:05–0:15 — `openclaw run /cleo-search "GDPR Article 17"` → real EUR-Lex text
 - 0:15–0:25 — `openclaw run /cleo-classify "stainless steel beam"` → HS 7216.10 + confidence
 - 0:25–0:35 — `openclaw run /cleo-compliance "drone with infrared camera" KZ` → full decision pack
-- 0:35–0:45 — End card: `openclaw plugins install clawhub:legal-data` + pricing
+- 0:35–0:45 — End card: `openclaw plugins install clawhub:@alexbloch-ia/legal-data` + pricing
 
 **Follow-up thread (+72h):**
 

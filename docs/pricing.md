@@ -12,7 +12,7 @@
 - All 19 MCP tools
 - Email support
 
-[See current pricing →](https://legaldata-public.legaldata-public.cleolabs.co/pricing?utm_source=clawhub)
+[See current pricing →](https://legaldata-public.cleolabs.co/pricing?utm_source=clawhub)
 
 ## Enterprise
 

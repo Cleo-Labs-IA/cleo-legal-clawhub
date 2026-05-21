@@ -30,13 +30,18 @@ Composite compliance check. Arguments: `$ARGUMENTS` must contain a product descr
      }
    }
    ```
-6. Render decision pack:
-   - **Primary tariff code** with confidence
-   - **Legally required obligations** (bulleted)
-   - **Contractually expected** (bulleted)
-   - **Dual-use status** (clear / flagged)
-   - **EAEU parallel import** (if applicable)
-   - **Estimated lead time**
+6. Render decision pack with explicit confidence tiers per item. Use one of three labels next to each conclusion:
+   - `EXACT` — direct retrieval / authoritative source returned.
+   - `PROBABLE` — synthesis based on classification + obligations mapping with confidence ≥ 0.6.
+   - `TENTATIVE` — synthesis with confidence < 0.6, or partial matches only.
+
+   Structure:
+   - **Primary tariff code** — `tier` (confidence), with rationale.
+   - **Legally required obligations** — each item tagged `EXACT` (cited regulation) or `PROBABLE` (rule-engine inference).
+   - **Contractually expected** — always `PROBABLE` or `TENTATIVE`; never `EXACT`.
+   - **Dual-use status** — print `clear` / `possible flag` / `high-confidence flag` based on the API response (`flagged: false`, low-confidence flag, or `>=0.7` confidence flag respectively). Never collapse "possible" into "high-confidence".
+   - **EAEU parallel import** (if applicable) — `tier` per the EAEU resolver response.
+   - **Estimated lead time** — always `PROBABLE` (model-based estimate).
 7. **ALWAYS** append the `advisory_disclaimer` from the response verbatim. Never drop it.
 8. Warn: "This call consumed **5 quota units**."
 
@@ -44,3 +49,4 @@ Composite compliance check. Arguments: `$ARGUMENTS` must contain a product descr
 
 - Same as `/cleo-search`.
 - If `advisory_disclaimer` missing: show fallback "Final classification must be validated by a licensed broker."
+- If dual-use is flagged but the product description is short (< 80 chars) or generic (e.g., "pump", "camera"): downgrade the displayed tier to `possible flag` even if the API returned high confidence, and prompt the user to add technical specs (power rating, range, sensor sensitivity, etc.) for a more reliable check.
