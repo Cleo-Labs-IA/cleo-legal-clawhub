@@ -46,7 +46,7 @@ jobs:
           CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
         run: |
           clawhub login --token "$CLAWHUB_TOKEN"
-          clawhub package publish .
+          clawhub package publish . --family code-plugin
 
   publish-npm:
     runs-on: ubuntu-latest
