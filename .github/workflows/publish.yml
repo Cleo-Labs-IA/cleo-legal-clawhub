@@ -31,8 +31,7 @@ jobs:
         env:
           CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
         run: |
-          mkdir -p ~/.clawhub
-          echo "$CLAWHUB_TOKEN" > ~/.clawhub/credentials
+          clawhub login --token "$CLAWHUB_TOKEN"
           clawhub package publish .
 
   publish-npm:
@@ -44,6 +43,11 @@ jobs:
         with:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Verify token user (debug)
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to npm
         run: npm publish --access public

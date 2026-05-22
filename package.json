@@ -1,6 +1,6 @@
 {
-  "name": "@alexblochia/legal-data",
-  "version": "1.2.1",
+  "name": "@alexbloch-ia/legal-data",
+  "version": "1.2.2",
   "description": "Legal data plugin for OpenClaw — 66 official sources across 100+ countries.",
   "license": "MIT-0",
   "type": "module",

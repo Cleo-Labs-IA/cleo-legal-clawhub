@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.2 — 2026-05-22 (publish workflow fix)
+
+Re-cuts 1.2.1 after the publish workflow failed on both jobs.
+
+- **Fix**: npm scope reverted to `@alexbloch-ia/legal-data` (the previous `@alexblochia` rename did not match the npm user owning `NPM_TOKEN`, causing `404 PUT` on first publish).
+- **Fix**: ClawHub auth in CI now uses `clawhub login --token "$CLAWHUB_TOKEN"` (the old `echo > ~/.clawhub/credentials` wrote to a path the CLI does not read; correct config lives at `~/.config/clawhub/config.json` and the CLI writes it itself on `login`).
+- **Chore**: added `npm whoami` debug step before `npm publish` so any future scope mismatch surfaces immediately.
+
 ## 1.2.1 — 2026-05-21 (audit-driven fix release)
 
 Addresses the ruthless audit dated 2026-05-21. No behavior changes; corrects packaging, install command, runtime compatibility, and visible URLs.
